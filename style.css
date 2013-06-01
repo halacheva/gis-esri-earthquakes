@@ -1,0 +1,181 @@
+html, body {
+	height: 95%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+}
+
+ul#menu {
+	font-size: 12px;
+	height: 30px;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0 9px;
+	position: absolute;
+	top: 0;
+	z-index: 39;
+	text-transform: uppercase;
+}
+
+ul#menu li {
+	background: none repeat scroll 0 0 #239993;
+	border-radius: 0 0 25px 25px;
+	box-shadow: 4px 0 11px #ADADAD;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline;
+	float: left;
+	font-weight: bold;
+	margin: 0 2px;
+	padding: 0 15px 5px;
+	text-align: center;
+	width: 162px;
+}
+
+ul#menu li * {
+	display: none;
+}
+
+ul#menu li:hover {
+	background: none repeat scroll 0 0 #37D6CE;
+}
+
+ul#menu li.active {
+	background: none repeat scroll 0 0 #37D6CE;
+}
+
+ul#menu li.active * {
+	display: block;
+	opacity: 0;
+}
+
+ul#menu li.active span.button {
+	background: none repeat scroll 0 0 #258982;
+	border-radius: 2px 2px 2px 2px;
+	font-size: 10px;
+	margin: 5px auto;
+	padding: 2px;
+	text-transform: none;
+	width: 98%;
+}
+
+ul#menu li.active span.button:hover {
+	background: none repeat scroll 0 0 #26ADA2;
+}
+
+ul#menu li.active span.close {
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: -15px;
+}
+
+ul#menu li#search.active input {
+	margin: 10px auto 0;
+	padding: 2px;
+	width: 158px;
+}
+
+ul#menu li#search.active span.button {
+	width: 30px;
+}
+
+ul#menu li.active span.current-map {
+	background: none repeat scroll 0 0 #26ADA2;
+}
+
+ul#menu li#find.active input {
+	margin: 10px auto 0;
+	padding: 2px;
+	width: 158px;
+}
+
+ul#menu li#find.active span.button {
+	width: 40px;
+}
+
+ul#menu li#analyze.active div#analyze_filters p {
+	color: darkblue;
+	font-size: 11px;
+	text-transform: none;
+	float: left;
+	margin: 10px 0 0 4px;
+}
+
+ul#menu li#analyze.active div#analyze_filters p#tsunami_filter {
+	font-size: 10px;
+	height: 19px;
+	margin-top: 12px;
+	text-transform: uppercase;
+	width: 200px;
+}
+
+ul#menu li#analyze.active div#analyze_filters input {
+	float: left;
+	margin: 2px 4px;
+	width: 198px;
+}
+
+ul#menu li#analyze.active div#analyze_filters input[type="checkbox"] {
+	border: medium none;
+	float: right;
+	outline: medium none;
+	margin-top: -1px;
+	width: 13px;
+}
+
+ul#menu li#analyze.active span.button {
+	margin: 6px 0 0 5px;
+	width: 49px;
+	float: left;
+}
+
+ul#menu li#analyze.active span#toggle_button.button {
+	width: 80px;
+}
+
+#map {
+	border: 2px solid #666666;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 3px 6px 10px #ADADAD;
+	height: 89%;
+	margin: 30px auto 0;
+	padding: 0;
+	width: 98%;
+	height: 100%;
+}
+
+div.success {
+	
+}
+
+div.error {
+	color: #A51010;
+	text-align: center;
+}
+
+.dj_ie .infowindow .window .top .right .user .content {
+	position: relative;
+}
+.dj_ie .simpleInfoWindow .content {
+	position: relative;
+}
+
+.esriAttributeInspector {
+	height: 100px;
+}
+.esriAttributeInspector .atiLayerName {
+	display: none;
+}
+.saveButton {
+	padding-left: 45px;
+	margin: 0px;
+	width: 16px;
+	height: 16px;
+}

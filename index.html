@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
+		<!--The viewport meta tag is used to improve the presentation and behavior of the samples
+		on iOS devices-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+		<title>Earthquakes From Last Seven Days</title>
+
+		<!-- ArcGIS and Dojo css -->
+		<link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/soria/soria.css">
+		<link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css" />
+
+		<!-- ArcGIS API -->
+		<script>
+			var dojoConfig = {
+				parseOnLoad : true
+			};
+		</script>
+		<script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/"></script>
+
+		<script src="main.js" type="text/javascript"></script>
+		<script src="map.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="soria">
+		<div id="content">
+			<ul id="menu">
+				<li id="search">
+					Location search<span class="close">X</span>
+					<input type="text" placeholder="Type location here" id="search_query"/>
+					<span id="search_button" class="button"> Go </span>
+				</li>
+				<li id="change_map">
+					Change base map<span class="close">X</span>
+					<span class="button" data-basemap-id="basemap_0"> Open Street Maps </span>
+					<span class="button" data-basemap-id="basemap_1"> Oceans </span>
+					<span class="button" data-basemap-id="basemap_2"> National Geographic </span>
+					<span class="button" data-basemap-id="basemap_4"> Terrain with Labels </span>
+					<span class="button" data-basemap-id="basemap_5"> Topographic </span>
+					<span class="button current-map" data-basemap-id="basemap_6"> Streets </span>
+					<span class="button" data-basemap-id="basemap_7"> Imagery with Labels</span>
+
+				</li>
+				<li id="find">
+					Find by region<span class="close">X</span>
+					<input type="text" placeholder="Type region here" id="find_query"/>
+					<span id="find_button" class="button"> Find </span>
+				</li>
+				<li id="analyze">
+					1970 - 2009 Analysis<span class="close">X</span>
+					<div id="analyze_filters">
+						<span id="draw_button" class="button">Draw</span>
+						<p>
+							zone on the map and you can add the following filters:
+						</p>
+						<p id="tsunami_filter">
+							Filter only with Tsunami
+							<input id="tsunami" type="checkbox" />
+						</p>
+						<input id="location" type="text" placeholder="Type location here"/>
+						<input id="magnitude" type="text" placeholder="Type min magnitude here" />
+						<input id="deaths" type="text" placeholder="Type min number of deaths here" />
+						<input id="injured" type="text" placeholder="Type min number of injured here" />
+						<input id="year" type="text" placeholder="Type year from 1970 to 2009 here"/>
+						<span id="anlyze_button" class="button"> Analyze </span>
+						<span id="toggle_button" class="button"> Toggle Layer </span>
+						<span id="clear_button" class="button"> Clear </span>
+					</div>
+				</li>
+			</ul>
+			<div id="map"> </div>
+		</div>
+	</body>
+</html>

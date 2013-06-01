@@ -161,6 +161,10 @@ var ArcGis = {
 		ArcGis.editToolbar = new esri.toolbars.Edit(this.map);
 	},
 	analyze : function() {
+		if (this.isEditToolbarActive) {
+			alert("Please, finish the editing before the anlysis.");
+			return;
+		}
 		this.map.infoWindow.hide();
 		var queryTask = new esri.tasks.QueryTask(this.queryUrl);
 		var query = new esri.tasks.Query();
@@ -170,7 +174,7 @@ var ArcGis = {
 
 		var re = new RegExp(/^[0-9]{4}$/);
 		var name = dojo.byId(this.selectors.name).value.toUpperCase();
-		var tsunami = (dojo.byId(this.selectors.name).checked) ? " AND Tsu = 'Tsu' " : " ";
+		var tsunami = (dojo.byId(this.selectors.tsunami).checked) ? " AND Tsu = 'Tsu' " : " ";
 		var magnitude = (Number(dojo.byId(this.selectors.magnitude).value)) ? dojo.byId(this.selectors.magnitude).value : 0;
 		var deaths = (Number(dojo.byId(this.selectors.deaths).value)) ? dojo.byId(this.selectors.deaths).value : 0;
 		var injured = (Number(dojo.byId(this.selectors.injured).value)) ? dojo.byId(this.selectors.injured).value : 0;

@@ -81,6 +81,7 @@ function clickOnMenuItem(e) {
       e.value = "";
       e.checked = undefined;
     });
-    ArcGis.map.toolbar.deactivate();
+
+    if (ArcGis.map.toolbar != undefined) { ArcGis.map.toolbar.deactivate(); }
   }
 }
